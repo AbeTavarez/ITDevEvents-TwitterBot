@@ -1,0 +1,19 @@
+{
+  "name": "itdevevents-twitterbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abraham Tavarez",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "aws-sdk": "^2.1009.0",
+    "aws-serverless-express": "^3.4.0",
+    "config": "^3.3.6",
+    "serverless": "^2.63.0",
+    "twit": "^2.2.11"
+  }
+}
