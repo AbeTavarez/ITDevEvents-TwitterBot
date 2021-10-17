@@ -16,7 +16,7 @@ const Twit = new twit({
 
 module.exports.twitterBot = (event, context, callback) => {
     let params = {
-        q:'#Trending min_retweets: 1 lang: en',
+        q:'#ITDevEvents #ItDevEvents OR itdevevents min_retweets: 20 lang: en',
         result_type: 'recent',
         count: 150
     }
