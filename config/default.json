@@ -1,8 +1,8 @@
 {
     "twitter_account" : {
-        "consumer_key": "",
-        "consumer_secret": "",
-        "access_token": "",
-        "access_token_secret": ""
+        "consumer_key": "RdppRPH2X5pDr5glE7VIXnlRW",
+        "consumer_secret": "VHnfPkIcAzQYR8uQUvkqZma56dFWbcVPolrgEyO9Pj0RU0ar6e",
+        "access_token": "1449509471068332033-rErPyz4st2hAci8RbzYPAR7bIGvCgZ",
+        "access_token_secret": "JFTwVYfYgGm0R44GsmvK5RQyFbXvLyuAWVPl3mwmwevtS"
     }
 }
