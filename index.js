@@ -15,9 +15,10 @@ const Twit = new twit({
 
 function retweet() {
   let params = {
-    q: "#Trending min_retweets: 1 lang: en",
-    result_type: "recent",
-    count: 150,
+    q: "# ITDevEvents # ItDevEvents OR # itdevevents", // what we want to search for
+    result_type: "recent", // returns the most recent results
+    count: 1, // specify the number of tweets to return
+    lang: 'en' // language
   };
 
   Twit.get("search/tweets", params, (err, data, response) => {
@@ -43,10 +44,12 @@ function retweet() {
 
                 if (response) {
                   console.log(`Post retweeted`);
+                  console.log(response);
                 }
 
                 if (err) {
                   console.log(`Already retweeted`);
+                  console.log(err);
                 }
               }
             );

@@ -3,3 +3,4 @@ config
 default.json
 serverless.yml
 .serverless
+Notes.txt

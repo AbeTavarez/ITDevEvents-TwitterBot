@@ -16,20 +16,21 @@ const Twit = new twit({
 
 module.exports.twitterBot = (event, context, callback) => {
     let params = {
-        q:'#ITDevEvents #ItDevEvents OR itdevevents min_retweets: 20 lang: en',
+        q:'# ITDevEvents # ItDevEvents OR # itdevevents',
         result_type: 'recent',
-        count: 150
+        count: 5,
+        lang: 'en'
     }
 
     Twit.get('search/tweets', params, (err, data, response) => {
         let tweets = data.statuses
         if(!err) {
-            for (let dat of tweets) {
-                let retweetId = dat.id_str;
+            for (let tweet of tweets) {
+                let retweetId = tweet.id_str;
                 Twit.post('statuses/retweet/:id', {id: retweetId}, (err, response) => {
                     Twit.post('favorites/create', {id: retweetId}, (err, response) => {
                         if (response) {
-                            return callback(null, `Post retweeted and favorite! with retweetId-${retweetId}`)
+                            return callback(null, `Post retweeted and favorited! with retweetId-${retweetId}`)
                         }
 
                         if (err){
