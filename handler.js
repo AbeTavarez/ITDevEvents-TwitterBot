@@ -18,7 +18,7 @@ module.exports.twitterBot = (event, context, callback) => {
     let params = {
         q:'# ITDevEvents # ItDevEvents OR # itdevevents',
         result_type: 'recent',
-        count: 5,
+        count: 100,
         lang: 'en'
     }
 
